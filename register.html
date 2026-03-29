@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: floralwhite;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 { text-align: center; }
+    label { display: block; margin-top: 10px; }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .message {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .success { background-color: #d4edda; color: #155724; }
+    .error { background-color: #f8d7da; color: #721c24; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Investment Portal</h1>
+    <label for="investmentType">Select Investment:</label>
+    <select id="investmentType">
+      <option value="crypto">Crypto Mining</option>
+      <option value="realEstate">Real Estate</option>
+      <option value="stocks">Stocks</option>
+      <option value="gold">Gold Mining</option>
+    </select>
+
+    <label for="amount">Enter Amount ($):</label>
+    <input type="number" id="amount" placeholder="Enter investment amount">
+
+    <button onclick="checkInvestment()">Invest</button>
+     <div id="message" class="message"></div>
+
+  <script>
+  function checkInvestment() {
+      const type = document.getElementById('investmentType').value;
+      const amount = parseFloat(document.getElementById('amount').value);
+      const messageDiv = document.getElementById('message');
+
+      // Set minimums
+      const minAmounts = {
+        crypto: 5000,
+        realEstate: 10000,
+        stocks: 5000,
+        gold: 5000
+      };
+
+      if (!amount || amount <= 0) {
+        messageDiv.innerHTML = "Please enter a valid amount.";
+        messageDiv.className = "message error";
+        return;
+      }
+
+      if (amount < minAmounts[type]) 
+      {
+        messageDiv.innerHTML = Minimum investment for ${type} is $${minAmounts[type]}.;
+        messageDiv.className = "message error"
+    }
+       else(
+        messageDiv.innerHTML = Success! You invested $${amount} in ${type}.;
+        messageDiv.className = "message success  
+          )
+            
+      }
+    }
+  </script>
+</body>
+</html>
