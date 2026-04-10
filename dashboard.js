@@ -1,6 +1,6 @@
 // load saved values
-let main = localStorage.getItem("mainBalance") || 3000;
-let profit = localStorage.getItem("profitBalance") || 100;
+let main = localStorage.getItem("mainBalance") || 0;
+let profit = localStorage.getItem("profitBalance") || 0;
 
 // convert to number
 main = Number(main);

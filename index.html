@@ -11,23 +11,36 @@
 
   <!-- Header -->
   <header>
-    <div class="container">
+  <div class="container header-flex">
+    <div class="logo">
       <h1>LTE Global</h1>
-      <nav>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#get-started">Get Started</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="auth-buttons">
-        <a href="register.html" class="btn">Register</a>
-        <a href="login.html" class="btn">Login</a>
-      </div>
     </div>
-  </header>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#get-started">Get Started</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="auth-buttons">
+      <a href="register.html" class="btn">Register</a>
+      <a href="login.html" class="btn">Login</a>
+    </div>
+  </div>
+
+  <div class="welcome-text">
+    <p> <marquee behavior="fast" direction="">WELCOME TO LTE GLOBAL</marquee></p>
+  </div>
+</header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -116,12 +129,12 @@
         
         <div class="testimonial">
           <p>"LTE Global transformed my approach to investing. Their crypto mining and stock strategies consistently generate impressive returns. I feel confident with every investment."</p>
-          <h4>- Samuel O., Lagos, Nigeria</h4>
+          <h4>- Abraham O., Dublin, Ireland,</h4>
         </div>
 
         <div class="testimonial">
           <p>"Investing in real estate with LTE Global has been seamless. Their team guides you at every step, and I’ve already seen my portfolio grow steadily."</p>
-          <h4>- Aisha K., Abuja, Nigeria</h4>
+          <h4>- Olivia K., Edinburgh, Scotland</h4>
         </div>
 
         <div class="testimonial">
@@ -149,7 +162,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact">
+  <section id="contact" class="contact">
   <h2>Contact Support</h2>
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     
@@ -165,12 +178,21 @@
   </form>
 </section>
 
+
   <!-- Footer -->
   <footer>
     <div class="container">
       <p>© 2023 LTE Global. All Rights Reserved.</p>
     </div>
   </footer>
+  <script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
 
 </body>
 </html>

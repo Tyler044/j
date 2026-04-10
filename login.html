@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
     <title>Login</title>
-    </head>
+</head>
 <body>
-    
     <header id="nav-header">
         <!--header section-->
-        <header id="nav-header">
         <nav >
             <div class="logo">
             <div class="logo-hold"><img src="images/logo.jpg" alt="LTE"></div>
@@ -18,66 +16,26 @@
                 <li>
                     <a href="index.html">Home</a>
                 </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+                
             </ol>
         </nav>
-
-
     </header>
-    
-    <main><h1>Welcome to LTE Investment Platform </h1>
-        <h2>Login</h2>
 
-    <form onsubmit="return loginUser()">
-    <input type="text" id="username" placeholder="Username" required><br><br>
-    <input type="password" id="password" placeholder="Password" required><br><br>
-    <button type="submit">Login</button>
-    </form>
-
-    <p id="error" style="color:red;"></p>
-       
+    <main class="login-container">
+        <form class="login-form" onsubmit="return loginUser(event)">
+            <h2>LTE Login</h2>
+            <input type="text" placeholder="Username" name="admin">
+            <input type="password" placeholder="Password" name="password">
+            <button type="submit">Login</button>
+            
+            <p>Don't have an account? <a href="register.html">Register</a></p>
+        </form>
     </main>
-    
-
     <footer>
-
-
-    
+         <div class="container">
+      <p>© 2023 LTE Global. All Rights Reserved.</p>
+    </div>
     </footer>
-   
-
-
-
-    <script>
-        function loginUser() {
-        var user = document.getElementById("username").value;
-        var pass = document.getElementById("password").value;
-
-    // Simple check (you can change this)
-    if (user === "admin" && pass === "1234") {
-        // Save login state
-        localStorage.setItem("loggedIn", "true");
-
-        // Redirect to dashboard
-        window.location.href = "dashboard.html";
-        return false;
-    } else {
-        document.getElementById("error").innerText = "Invalid login!";
-        return false;
-    }
-    }
-    </script>
-
+    
 </body>
 </html>
-
-
-
-
-
-    

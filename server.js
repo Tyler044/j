@@ -1,7 +1,7 @@
 function register() {
   let fullname = document.getElementById("fullname").value;
   let email = document.getElementById("email").value;
-  let phone = document.getElementById("phone").value;
+  let phone = document.getElementById("phonenumber").value;
   let username = document.getElementById("username").value;
   let password = document.getElementById("password").value;
   let confirm = document.getElementById("confirm").value;

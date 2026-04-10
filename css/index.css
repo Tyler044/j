@@ -1,183 +1,324 @@
-/* Testimonials Section */
-.testimonials {
-  background: #f0f0f0;
-  padding: 4rem 2rem;
-}
-
-.testimonials h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.testimonial {
-  background:whitesmoke;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.testimonial h4 {
-  text-align: right;
-  color: #0a2540;
-  font-weight: normal;
+/* ========== RESET ========== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* General Styles */
+
+/* ========== BODY ========== */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f9;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f7fb;
   color: #333;
+  line-height: 1.6;
 }
 
+/* ========== CONTAINER ========== */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 2rem 0;
 }
 
-/* Header */
+/* ========== HEADER ========== */
 header {
   background: #0a2540;
   color: #fff;
-  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header h1 {
-  display: inline-block;
-  margin: 0;
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
 }
 
-header nav {
-  display: inline-block;
-  float: none;
+.logo h1 {
+  font-size: 1.5rem;
 }
 
-header nav ul {
+/* NAV */
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: 25px;
 }
 
-header nav ul li {
-  display: inline;
-  margin-left: 20px;
-}
-
-header nav ul li a {
+nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
+nav ul li a:hover {
+  color: #f0a500;
+}
+
+/* BUTTONS */
 .auth-buttons .btn {
+  margin-left: 10px;
+  padding: 7px 14px;
   background: #f0a500;
   color: #fff;
-  padding: 0.5rem 1rem;
-  margin-left: 10px;
-  text-decoration: none;
   border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* Hero Section */
+.auth-buttons .btn:hover {
+  background: #d48f00;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* WELCOME TEXT */
+.welcome-text {
+  text-align: center;
+  background: #081a2c;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* ========== HERO ========== */
 .hero {
-  background: url('hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)),
+              url('hero-bg.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
   margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .btn-primary {
   background: #f0a500;
   color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  text-decoration: none;
 }
 
-/* Services Section */
+/* ========== SERVICES ========== */
 .services {
-  background: #fff;
   padding: 4rem 0;
+  background: #fff;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .service {
-  background: #eaeaea;
+  background: #f4f6fb;
   padding: 2rem;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-6px);
 }
 
 .service h3 {
-  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-/* Why Us Section */
+.service ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+/* ========== WHY US ========== */
 .why-us {
   background: #0a2540;
   color: #fff;
   padding: 4rem 0;
 }
 
+.why-us h2 {
+  margin-bottom: 1rem;
+}
+
 .why-us ul {
+  margin-top: 20px;
   list-style: none;
-  padding: 0;
 }
 
-.why-us ul li {
-  padding: 0.5rem 0;
+.why-us li {
+  padding: 8px 0;
 }
 
-/* Get Started Section */
+/* ========== TESTIMONIALS ========== */
+.testimonials {
+  background: #eef1f7;
+  padding: 4rem 2rem;
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  text-align: right;
+  color: #0a2540;
+}
+
+/* ========== GET STARTED ========== */
 .get-started {
-  background: #f0f0f0;
+  background: #f5f7fb;
   text-align: center;
   padding: 4rem 2rem;
 }
 
-.get-started .btn {
-  margin: 1rem 0.5rem;
+.get-started p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
-/* Contact Section */
+/* ========== CONTACT ========== */
 .contact {
+  padding: 4rem 2rem;
   background: #fff;
   text-align: center;
-  padding: 4rem 2rem;
 }
 
-/* Footer */
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #0a2540;
+  box-shadow: 0 0 5px rgba(10,37,64,0.2);
+}
+
+.contact button {
+  padding: 12px;
+  border: none;
+  background: #0a2540;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #f0a500;
+}
+
+/* ========== FOOTER ========== */
 footer {
   background: #0a2540;
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    color: #fff;
+  }
+
+  nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    background: #0a2540;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  nav.active {
+    max-height: 320px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
 }
