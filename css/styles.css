@@ -1,11 +1,13 @@
-body{
+#nav-header {
    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: whitesmoke;
+    background: blueviolet;
     color: black;
     text-align: center;
     margin-top: 70px;
-    padding: 20px;   
+    padding: 20px;
+    height: auto;
+   
 }
 
 .nav-link{
@@ -18,4 +20,130 @@ body{
     display:inline-block;
     margin: 15px;
     padding: 10px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo-hold img {
+    width: 60px; /* Reduced for mobile */
+    height: auto;
+}
+
+/* --- Hamburger Icon --- */
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    display: block; /* Show on mobile */
+}
+
+/* --- Menu Links (Hidden by default on Mobile) --- */
+.nav-link ul {
+    list-style: none;
+    width: 100%;
+    display: none; /* Hidden until toggled */
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Class to show menu when clicked */
+.nav-link ul.active {
+    display: flex;
+}
+
+.nav-link ul li {
+    margin: 15px 0;
+}
+
+.nav-link li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/* --- Content & Tables --- */
+table tr th td p {
+    font-size: 20px; /* Smaller for mobile readability */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Table responsiveness: makes it scrollable sideways on tiny screens */
+table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto; /* Adds horizontal scroll if table is too wide */
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+    min-width: 100px;
+}
+
+
+.logo-hold img{
+    display: flex;
+    width: 40%;
+    height: auto;
+}
+/* --- Desktop Layout (Screens wider than 768px) --- */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display:none ; /* Hide hamburger on desktop */
+    }
+
+    .nav-link ul {
+        display: flex; /* Always show links on desktop */
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+    }
+
+    .nav-link ul li {
+        margin: 0 20px;
+    }
+
+   
+
+    table {
+        display: table; /* Reset table layout for desktop */
+    }
+
+}
+/* --- Desktop Layout (Screens wider than 768px) --- */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    .nav-link ul {
+        display: flex; /* Always show links on desktop */
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+    }
+
+    .nav-link ul li {
+        margin: 0 20px;
+    }
+
+    p {
+        font-size: 40px;
+    }
+
+    table {
+        display: table; /* Reset table layout for desktop */
+    }
+}
+
+.dashboard {
+    text-align: center;
 }

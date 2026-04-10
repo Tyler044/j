@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LTE</title>
+    <title>Login</title>
     </head>
 <body>
     
@@ -27,9 +27,19 @@
             </ol>
         </nav>
 
+
     </header>
     
     <main><h1>Welcome to LTE Investment Platform </h1>
+        <h2>Login</h2>
+
+    <form onsubmit="return loginUser()">
+    <input type="text" id="username" placeholder="Username" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+    </form>
+
+    <p id="error" style="color:red;"></p>
        
     </main>
     
@@ -39,8 +49,32 @@
 
     
     </footer>
+   
 
 
+
+    <script>
+        function loginUser() {
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
+
+    // Simple check (you can change this)
+    if (user === "admin" && pass === "1234") {
+        // Save login state
+        localStorage.setItem("loggedIn", "true");
+
+        // Redirect to dashboard
+        window.location.href = "dashboard.html";
+        return false;
+    } else {
+        document.getElementById("error").innerText = "Invalid login!";
+        return false;
+    }
+    }
+    </script>
+
+</body>
+</html>
 
 
 

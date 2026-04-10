@@ -1,0 +1,79 @@
+body {
+  font-family: Arial;
+  background: #0b2c3d;
+  color: white;
+  margin: 0;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #0a3a4f;
+}
+
+/* Card */
+.card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff4d6d, #ff9a00);
+}
+
+.wallet {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* Buttons */
+.actions {
+  padding: 20px;
+}
+
+.trade {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  border: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #5f6dfc;
+  color: white;
+}
+
+.buy {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: #ff4d6d;
+  border: none;
+  color: white;
+}
+
+/* Menu */
+.menu {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.menu p {
+  padding: 10px;
+}
+
+.active {
+  background: #6c63ff;
+  border-radius: 20px;
+}

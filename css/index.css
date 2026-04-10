@@ -1,0 +1,183 @@
+/* Testimonials Section */
+.testimonials {
+  background: #f0f0f0;
+  padding: 4rem 2rem;
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background:whitesmoke;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial h4 {
+  text-align: right;
+  color: #0a2540;
+  font-weight: normal;
+  margin: 0;
+}
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+header {
+  background: #0a2540;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+header nav {
+  display: inline-block;
+  float: none;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-buttons .btn {
+  background: #f0a500;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #f0a500;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Services Section */
+.services {
+  background: #fff;
+  padding: 4rem 0;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service {
+  background: #eaeaea;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.service h3 {
+  margin-top: 0;
+}
+
+/* Why Us Section */
+.why-us {
+  background: #0a2540;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.why-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-us ul li {
+  padding: 0.5rem 0;
+}
+
+/* Get Started Section */
+.get-started {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.get-started .btn {
+  margin: 1rem 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+  background: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+/* Footer */
+footer {
+  background: #0a2540;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}

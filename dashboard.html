@@ -1,58 +1,59 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    </head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
 <body>
-     <header id="nav-header">
-        <!--header section-->
-        <header id="nav-header">
-        <nav >
-            <div class="logo">
-            <div class="logo-hold"><img src="images/logo.jpg" alt="LTE"></div>
-            <ol class="nav-link">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ol>
-        </nav>
 
-    </header>
-    
-    <main>
-        <h1>Dashboard</h1>
-        <p id="userEmail"></p>
-        <p id="balance"></p>
+<!-- Top Bar -->
+<div class="topbar">
+  <button class="back">←</button>
+  <button class="home">🏠</button>
+  <select>
+    <option>English</option>
+  </select>
+  <button class="user">👤</button>
+</div>
 
-        <input id="amount" placeholder="Enter amount">
-        <button onclick="deposit()">Deposit</button>
-        <br><br>
-        <button onclick="logout()">logout</button>
+<!-- Balance Card -->
+<div class="card">
+  <h2>Account Balance</h2>
 
-        <script src="dashboard.html"></script>
-        
-       
-    </main>
+  <div class="wallet">
+    <p>Main Wallet</p>
+    <span id="mainBalance">$0</span>
+  </div>
 
-    <footer>
+  <div class="wallet">
+    <p>Profit Wallet</p>
+    <span id="profitBalance">$0</span>
+  </div>
+</div>
 
+<!-- Buttons -->
+<div class="actions">
+  <button class="trade">Trade with Binance</button>
 
-    
-    </footer>
+  <div class="row">
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="invest()">Invest Now</button>
+  </div>
 
+  <button class="buy">Buy Crypto</button>
+</div>
 
+<!-- Menu -->
+<div class="menu">
+  <p class="active">Dashboard</p>
+  <p>All Plans</p>
+  <p>Plan Logs</p>
+  <p>All Transactions</p>
+  <p>Add Money</p>
+</div>
 
+<script src="dashboard.js"></script>
 
-
-
-
-    
+</body>
+</html>
