@@ -175,17 +175,31 @@
   <h2>Contact Support</h2>
 
   <?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST")
-  {
-    $to = "info@lteuniglobal.com"
-      $name = htmlspecialchars($_POST['name']);
-      $email = htmlspecialchars($_POST['email']);
-      $subject = htmlspecialchars($_POST['subject']);
-      $message = htmlspecialchars($_POST['message']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-      echo "<p style='color:green;'>Message sent successfully! We will get back to you shortly.</p>";
-  }
-  ?>
+    $to = "info@lteuniglobal.com";
+
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
+
+    // Build email
+    $fullMessage = "Name: $name\n";
+    $fullMessage .= "Email: $email\n\n";
+    $fullMessage .= "Message:\n$message";
+
+    // Headers
+    $headers = "From: $email";
+
+    // Send mail
+    if (mail($to, $subject, $fullMessage, $headers)) {
+        echo "<p style='color:lightgreen;'>✅ Message sent successfully!</p>";
+    } else {
+        echo "<p style='color:red;'>❌ Failed to send message. Try again.</p>";
+    }
+}
+?>
 
   <form method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
