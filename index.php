@@ -48,8 +48,16 @@
     <h2>Smart Crypto Investments. Secure Future.</h2>
     <p>Grow your digital assets with confidence. LTE Global provides secure, transparent, and high-performing cryptocurrency investment solutions designed for both beginners and professionals.</p>
     <a href="#get-started" class="btn btn-primary">Start Investing</a>
+    
   </div>
 </section>
+<div class="prices">
+  <div class="coin">BTC <span id="btc">--</span></div>
+  <div class="coin">ETH <span id="eth">--</span></div>
+  <div class="coin">LTC <span id="ltc">--</span></div>
+  <div class="coin">BNB <span id="bnb">--</span></div>
+  <div class="coin">USDT <span id="usdt">--</span></div>
+</div>
 
 <!-- SERVICES -->
 <section id="services" class="services">
@@ -167,7 +175,9 @@
   <h2>Contact Support</h2>
 
   <?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if ($_SERVER["REQUEST_METHOD"] == "POST")
+  {
+    $to = "info@lteuniglobal.com"
       $name = htmlspecialchars($_POST['name']);
       $email = htmlspecialchars($_POST['email']);
       $subject = htmlspecialchars($_POST['subject']);
@@ -189,7 +199,6 @@
 <footer>
   <div class="container">
     <p>© <?php echo date("Y"); ?> LTE Global. All Rights Reserved.</p>
-    <p>Invest responsibly. Cryptocurrency investments carry risk.</p>
   </div>
 </footer>
 
@@ -200,6 +209,28 @@
   toggle.addEventListener("click", () => {
     nav.classList.toggle("active");
   });
+  // CRYPTO PRICES
+async function loadPrices() {
+  try {
+    const res = await fetch(
+      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin,binancecoin,tether&vs_currencies=usd"
+    );
+
+    const data = await res.json();
+
+    document.getElementById("btc").innerText = data.bitcoin.usd;
+    document.getElementById("eth").innerText = data.ethereum.usd;
+    document.getElementById("ltc").innerText = data.litecoin.usd;
+    document.getElementById("bnb").innerText = data.binancecoin.usd;
+    document.getElementById("usdt").innerText = data.tether.usd;
+
+  } catch (e) {
+    console.log("Error loading prices");
+  }
+}
+
+loadPrices();
+setInterval(loadPrices, 10000); // every 10 sec
 </script>
 
 </body>

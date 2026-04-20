@@ -322,3 +322,106 @@ footer {
     font-size: 1.8rem;
   }
 }
+/* ========================= */
+/* 🔥 PRO CRYPTO TICKER */
+/* ========================= */
+
+.crypto-ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #020617;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+  padding: 12px 0;
+  position: relative;
+}
+
+/* Wrapper moves */
+.ticker-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scrollTicker 30s linear infinite;
+}
+
+/* Pause on hover (PRO FEATURE) */
+.crypto-ticker:hover .ticker-wrapper {
+  animation-play-state: paused;
+}
+
+/* Content blocks */
+.ticker-content {
+  display: flex;
+  gap: 50px;
+  padding-right: 50px;
+}
+
+/* Each coin */
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.ticker-item:hover {
+  transform: scale(1.1);
+}
+
+/* PRICE COLORS */
+.up {
+  color: #22c55e; /* green */
+}
+
+.down {
+  color: #ef4444; /* red */
+}
+
+/* ANIMATION */
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.prices {
+  margin-top: 30px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(2, 6, 23, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.coin {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid #1e293b;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.coin:last-child {
+  border-bottom: none;
+}
+
+.coin span {
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* Hover effect */
+.coin:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-radius: 6px;
+  transition: 0.2s;
+}

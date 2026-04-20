@@ -158,3 +158,68 @@ button:disabled {
     font-size: 16px;
   }
 }
+
+/* FULL HEIGHT FIX */
+html, body {
+  height: 100%;
+}
+
+/* MAIN PAGE STRUCTURE */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* MAIN CONTENT SHOULD EXPAND */
+main {
+  flex: 1;
+}
+
+/* FOOTER STAYS AT BOTTOM */
+footer {
+  margin-top: auto;
+}
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .wallet {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .actions button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  form input,
+  form button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+.card {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+button {
+  max-width: 100%;
+}
